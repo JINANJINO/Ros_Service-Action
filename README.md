@@ -68,3 +68,22 @@ In the service client file, it is set to receive two integer values ​​from t
 Finally, add what we wrote to the ```entry point``` of ```setup.py```, build it, and then run Node.
 
 ---
+
+## 2. Ros Service Assignment
+- Create a publisher that issues integer topics that increase by 1 at each step.
+  > Topic name : ```step_count```
+
+- Create a service server
+  > Receive two strings (create ```TwoStringService.srv```)
+  > Concatenate the two input strings with the most recently received step_count topic and return the result.
+
+- Create a service client
+  > Send ```TwoStringService.srv``` to the server
+  > The user enters two strings on the command line.
+
+My result: 
+- Publisher Code : ```step_count.py```
+- Service Server : ```step_count_service_server.py```
+- Service Client : ```step_count_service_client.py```
+  
+---
